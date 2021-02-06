@@ -1,0 +1,142 @@
+@import './colors.scss';
+
+.contactsContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    &>.contacts{
+        width: 100%;
+        max-width: 600px;
+        padding: 50px 0;
+        z-index: 2;
+        margin-top: 120px;
+    }
+    .contactsText{
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    .contactsTitle{
+        font-size: 45px;
+        color: $orange;
+        font-family: 'Dosis';
+        text-align: center;
+        @media(max-width: 650px){
+            font-size: 20px;
+        }
+    }
+    .contactsSubtitle{
+        margin-top: 10px;
+        // margin-bottom: 20px;
+        font-size: 22px;
+        color: $darck;
+        font-family: 'Dosis';
+        font-weight: 400;
+        text-align: center;
+        max-width: 400px;
+        @media(max-width:650px){
+            width: 100%;
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+    .contactsParagraph{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        color: $darck;
+        font-family: 'Dosis';
+        font-weight: 400;
+        max-width: 400px;
+        text-align: center;
+        @media(max-width:650px){
+            width: 100%;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+    .contacts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+.inputForm{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: center;
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    &>input{
+        width: 100%;
+        height: 55px;
+        margin-top: 15px;
+        padding: 10px;
+        font-size: 22px;
+        color: $darck;
+        border: none;
+        border: 2px solid $orange;
+        border-radius: 8px;
+        font-family: 'Dosis';
+        background: rgba(255,255,255,0.6);
+        outline: none;
+        @media(max-width:650px){
+            height: 40px;
+            font-size: 15px;
+        }
+    }
+    textarea{
+        width: 100%;
+        margin-top: 15px;
+        font-size: 22px;
+        padding: 10px;
+        border: none;
+        border: 2px solid $orange;
+        border-radius: 8px;
+        resize: vertical;
+        min-height: 200px;
+        max-height: 500px;
+        color: $darck;
+        font-family: 'Dosis';
+        background: rgba(255,255,255,0.6);
+        outline: none;
+        @media(max-width:650px){
+            font-size: 15px;
+            max-height: 380px;
+        }
+        // background: red;
+    }
+    .contactBTN{
+        width: 200px;
+        height: 60px;
+        background:$orange;
+        color: rgb(255, 255, 255);
+        font-family: 'Dosis';
+        border: none;
+        cursor: pointer;
+        border-radius: 15px;
+        outline: none;
+        @media(max-width: 650px){
+            width: 160px;
+            height: 40px;
+            padding: 0;
+        }
+    }
+}
+.shape3{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: auto;
+}

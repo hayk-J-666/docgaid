@@ -1,0 +1,152 @@
+@import './colors.scss';
+.welcomeContainer{
+    min-height: 100vh;
+    padding: 0 20px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    .shape{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 0px;
+        bottom: 0;
+    }
+    .welcomeImage{
+        width: 320px;
+        left: 20px;
+        transition: 1.5s;
+        position: relative;
+        animation: ipadMove 4.5s linear ;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        @keyframes ipadMove {
+            0%{
+                left: -100%;
+            }
+            75%{
+                left: -100%;
+            }
+            95%{
+                left: 40px;
+            }
+            100% {  
+                left: 20px;
+            }
+        }
+    }
+    .welcomeText{
+        position: relative;
+        @media(max-width:920px){
+            width: 100%;
+        }
+    }
+    .welcomeParagraph{
+        font-family: 'Dosis';
+        font-weight: 400;
+        color: $darck;
+        @media(max-width:920px){
+            width: 100%;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+    }
+    .welcomeTitleText{
+        min-height: 180px;
+        padding-top: 10px;
+        @media(max-width:920px){
+            width: 100%;
+            font-size: 30px;
+            text-align: center;
+        }
+    }
+    .welcomeTtitle{
+        color: $orange;
+        position: relative;
+        font-size: 45px;
+        // top: -46px;
+        animation: TitleMove 3s linear;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        font-family: 'Dosis';
+        @media(max-width:920px){
+            width: 100%;
+            font-size: 30px;
+            text-align: center;
+        }
+        @media(max-width:650px){
+            width: 100%;
+            font-size: 20px;
+            text-align: center;
+        }
+        @keyframes TitleMove {
+            0%{
+                top: 120px;
+                left: -390px;
+            }
+            50% {
+                top: 0px;
+                left: -390px;
+            }
+            100%{
+                top: 0px;
+                left: 0;
+            }
+        }
+    }
+    .subTitle{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: $darck;
+        font-family: 'Dosis';
+        font-weight: 700;
+        @media(max-width:920px){
+            width: 100%;
+            font-size: 16px;
+            margin-top: 0;
+            text-align: center;
+        }
+    }
+    .welcomeBlock{
+        display: flex;
+        margin-top: 100px;
+        justify-content: space-between;
+        align-items: flex-end;
+        transition: 1s;
+        @media(max-width:920px){
+            flex-direction: column;
+            margin-top: 0;
+            align-items: center;
+        }
+        &>img{
+            @media(max-width:920px){
+                width: 170px;
+                margin-left: -40px;
+                margin-bottom: 60px;
+            }
+            @media(max-width:400px){
+                width: 150px;
+                margin-left: -40px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .welcomeText{
+        width: calc(100% - 450px);
+        @media(max-width:920px){
+            width: 100%;
+        }
+        .welcomeParagraph{
+            font-size: 16px;
+            font-weight: 500;
+            @media(max-width:650px){
+                width: 100%;
+                font-size: 14px;
+                text-align: center;
+            }
+        }
+    }
+}
+
